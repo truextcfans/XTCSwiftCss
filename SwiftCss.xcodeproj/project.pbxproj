@@ -21,7 +21,6 @@
 		5DC9747C1EC18CCF00E3414D /* UIImageViewCss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC974721EC18CCF00E3414D /* UIImageViewCss.swift */; };
 		5DC9747D1EC18CCF00E3414D /* UILabelCss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC974731EC18CCF00E3414D /* UILabelCss.swift */; };
 		5DC9747E1EC18CCF00E3414D /* UIViewCss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC974741EC18CCF00E3414D /* UIViewCss.swift */; };
-		5DC9747F1EC18CCF00E3414D /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC974751EC18CCF00E3414D /* UserDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +40,6 @@
 		5DC974721EC18CCF00E3414D /* UIImageViewCss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImageViewCss.swift; path = css/UIImageViewCss.swift; sourceTree = "<group>"; };
 		5DC974731EC18CCF00E3414D /* UILabelCss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UILabelCss.swift; path = css/UILabelCss.swift; sourceTree = "<group>"; };
 		5DC974741EC18CCF00E3414D /* UIViewCss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewCss.swift; path = css/UIViewCss.swift; sourceTree = "<group>"; };
-		5DC974751EC18CCF00E3414D /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDefaults.swift; path = css/UserDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +95,6 @@
 				5DC974721EC18CCF00E3414D /* UIImageViewCss.swift */,
 				5DC974731EC18CCF00E3414D /* UILabelCss.swift */,
 				5DC974741EC18CCF00E3414D /* UIViewCss.swift */,
-				5DC974751EC18CCF00E3414D /* UserDefaults.swift */,
 			);
 			name = CSS;
 			sourceTree = "<group>";
@@ -183,7 +180,6 @@
 				5DC9747A1EC18CCF00E3414D /* UIButtonCss.swift in Sources */,
 				5DC9747C1EC18CCF00E3414D /* UIImageViewCss.swift in Sources */,
 				5DC9745A1EC1721500E3414D /* AppDelegate.swift in Sources */,
-				5DC9747F1EC18CCF00E3414D /* UserDefaults.swift in Sources */,
 				5DC974791EC18CCF00E3414D /* OtherOperator.swift in Sources */,
 				5DC974781EC18CCF00E3414D /* CssOperator.swift in Sources */,
 				5DC9747E1EC18CCF00E3414D /* UIViewCss.swift in Sources */,

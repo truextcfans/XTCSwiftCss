@@ -6,6 +6,7 @@ s.version = '0.0.1'
 s.source = { :git => 'git@github.com:swagger-api/swagger-mustache.git', :tag => 'v1.0.0' }
 s.license = 'Apache License, Version 2.0'
 s.source_files = 'SwiftCss/css/**/*.swift'
+s.dependency 'SwiftExtension', :git => 'http://git.thinker.vc/xietiancai/swift-extension.git'
 s.homepage = 'xtc'
 s.summary = 'xtc'
 s.authors = 'xtc'
