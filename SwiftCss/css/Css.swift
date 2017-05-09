@@ -62,22 +62,22 @@ extension UIColor{
         
     }
     
-    var bgImgCss:UIButtonCss{
-        get{
-            return {
-                $0.setBackgroundImage(self.translateIntoImage(), for: .normal)
-            }
-        }
-        
-    }
-    var bgImgHCss:UIButtonCss{
-        get{
-            return {
-                $0.setBackgroundImage(self.translateIntoImage(), for: .highlighted)
-            }
-        }
-        
-    }
+//    var bgImgCss:UIButtonCss{
+//        get{
+//            return {
+//                $0.setBackgroundImage(self.translateIntoImage(), for: .normal)
+//            }
+//        }
+//        
+//    }
+//    var bgImgHCss:UIButtonCss{
+//        get{
+//            return {
+//                $0.setBackgroundImage(self.translateIntoImage(), for: .highlighted)
+//            }
+//        }
+//        
+//    }
 }
 
 

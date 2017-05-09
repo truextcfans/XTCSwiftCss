@@ -20,9 +20,9 @@ func +=(lhsCube: UILabel, rhsCube:String){
 func +=(lhsCube: UILabel, rhsCube:UIFont){
     lhsCube.font = rhsCube
 }
-func +=(lhsCube: UILabel, rhsCube:CGFloat){
-    lhsCube.font = rhsCube.CustomFont
-}
+//func +=(lhsCube: UILabel, rhsCube:CGFloat){
+//    lhsCube.font = rhsCube.CustomFont
+//}
 
 
 
@@ -72,34 +72,34 @@ extension UIFont{
         }
     }
 }
-extension CGFloat{
-    var fontCss:Css{
-        get{
-            if let font = self.CustomFont{
-                return font.css
-            }
-            return {_ in }
-        }
-    }
-    
-    var regularFontCss:UILabelCss{
-        get{
-            if let font = self.CustomRegularFont{
-                return font.css
-            }
-            return {_ in }
-        }
-    }
-}
+//extension CGFloat{
+//    var fontCss:Css{
+//        get{
+//            if let font = self.CustomFont{
+//                return font.css
+//            }
+//            return {_ in }
+//        }
+//    }
+//    
+//    var regularFontCss:UILabelCss{
+//        get{
+//            if let font = self.CustomRegularFont{
+//                return font.css
+//            }
+//            return {_ in }
+//        }
+//    }
+//}
 extension Int{
-    var fontCss:Css{
-        get{
-            if let font = self.CustomFont{
-                return font.css
-            }
-            return {_ in }
-        }
-    }
+//    var fontCss:Css{
+//        get{
+//            if let font = self.CustomFont{
+//                return font.css
+//            }
+//            return {_ in }
+//        }
+//    }
 
     var linesCss:UILabelCss{
         get{

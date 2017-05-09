@@ -20,11 +20,11 @@ func titleColorCss(_ color:UIColor,_ state:UIControlState = .normal) -> UIButton
         $0.setTitleColor(color, for: state)
     }
 }
-func bgImgCss(_ color:UIColor,_ state:UIControlState = .normal) -> UIButtonCss {
-    return {
-        $0.setBackgroundImage(color.translateIntoImage(), for: state)
-    }
-}
+//func bgImgCss(_ color:UIColor,_ state:UIControlState = .normal) -> UIButtonCss {
+//    return {
+//        $0.setBackgroundImage(color.translateIntoImage(), for: state)
+//    }
+//}
 
 func +=(lhsCube: UIButton, rhsCube:UIImage){
     lhsCube.setBackgroundImage(rhsCube, for: .normal)
@@ -36,9 +36,9 @@ func +=(lhsCube: UIButton, rhsCube:String){
 func +=(lhsCube: UIButton, rhsCube:UIFont){
     lhsCube.titleLabel?.font = rhsCube
 }
-func +=(lhsCube: UIButton, rhsCube:CGFloat){
-    lhsCube.titleLabel?.font = rhsCube.CustomFont
-}
+//func +=(lhsCube: UIButton, rhsCube:CGFloat){
+//    lhsCube.titleLabel?.font = rhsCube.CustomFont
+//}
 
 
 
@@ -69,23 +69,23 @@ extension UIFont{
         }
     }
 }
-extension CGFloat{
-    var titleFontCss:UIButtonCss{
-        get{
-            return {
-                $0.titleLabel?.font = self.CustomFont
-            }
-        }
-    }
-    
-    var titleRegularFontCss:UIButtonCss{
-        get{
-            return {
-                $0.titleLabel?.font = self.CustomRegularFont
-            }
-        }
-    }
-}
+//extension CGFloat{
+//    var titleFontCss:UIButtonCss{
+//        get{
+//            return {
+//                $0.titleLabel?.font = self.CustomFont
+//            }
+//        }
+//    }
+//    
+//    var titleRegularFontCss:UIButtonCss{
+//        get{
+//            return {
+//                $0.titleLabel?.font = self.CustomRegularFont
+//            }
+//        }
+//    }
+//}
 
 
 
