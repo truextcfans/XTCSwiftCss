@@ -10,7 +10,7 @@ import Foundation
 
 // MARK: - NSObject设置css
 extension NSObject{
-    func setCss<T:NSObject>(_ css:((T)->())...){
+    public func setCss<T:NSObject>(_ css:((T)->())...){
         if self is T{
             css.forEach{$0(self as! T)}
         }

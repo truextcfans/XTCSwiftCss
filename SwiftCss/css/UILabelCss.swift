@@ -10,24 +10,24 @@ import Foundation
 import UIKit
 
 
-var lableFitSizeCss:UILabelCss = {
+public var lableFitSizeCss:UILabelCss = {
     $0.sizeToFit()
 }
 
-func +=(lhsCube: UILabel, rhsCube:String){
+public func +=(lhsCube: UILabel, rhsCube:String){
     lhsCube.text = rhsCube
 }
-func +=(lhsCube: UILabel, rhsCube:UIFont){
+public func +=(lhsCube: UILabel, rhsCube:UIFont){
     lhsCube.font = rhsCube
 }
-//func +=(lhsCube: UILabel, rhsCube:CGFloat){
+//public func +=(lhsCube: UILabel, rhsCube:CGFloat){
 //    lhsCube.font = rhsCube.CustomFont
 //}
 
 
 
 extension Bool{
-    var ableCss:UILabelCss{
+    public var ableCss:UILabelCss{
         get{
             return{
                 $0.isEnabled = self
@@ -39,7 +39,7 @@ extension Bool{
 
 
 extension String{
-    var textCss:UILabelCss{
+    public var textCss:UILabelCss{
         get{
             return{
                 $0.text = self
@@ -49,7 +49,7 @@ extension String{
 }
 
 extension UIFont{
-    var css:Css{
+    public var css:Css{
         get{
             return {
                 if let a = $0 as? UILabel{
@@ -73,7 +73,7 @@ extension UIFont{
     }
 }
 //extension CGFloat{
-//    var fontCss:Css{
+//    public var fontCss:Css{
 //        get{
 //            if let font = self.CustomFont{
 //                return font.css
@@ -82,7 +82,7 @@ extension UIFont{
 //        }
 //    }
 //    
-//    var regularFontCss:UILabelCss{
+//    public var regularFontCss:UILabelCss{
 //        get{
 //            if let font = self.CustomRegularFont{
 //                return font.css
@@ -92,7 +92,7 @@ extension UIFont{
 //    }
 //}
 extension Int{
-//    var fontCss:Css{
+//    public var fontCss:Css{
 //        get{
 //            if let font = self.CustomFont{
 //                return font.css
@@ -101,7 +101,7 @@ extension Int{
 //        }
 //    }
 
-    var linesCss:UILabelCss{
+    public var linesCss:UILabelCss{
         get{
             return {
                 $0.numberOfLines = self
@@ -115,7 +115,7 @@ extension Int{
 
 
 extension NSTextAlignment{
-    var css:UIViewCss{
+    public var css:UIViewCss{
         get{
             return {
                 if let a = $0 as? UILabel{

@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-typealias UIControlCss = (UIControl)->()
+public typealias UIControlCss = (UIControl)->()
 
-func enable(_ value:Bool) -> UIControlCss {
+public func enable(_ value:Bool) -> UIControlCss {
     return {
         $0.isEnabled = value
     }

@@ -9,23 +9,23 @@
 import Foundation
 import UIKit
 
-typealias Css               = (NSObject)->()
-typealias UIViewCss         = (UIView)->()
-typealias UILabelCss        = (UILabel)->()
-typealias UIButtonCss       = (UIButton)->()
-typealias UITextFieldCss    = (UITextField)->()
-typealias UITextViewCss     = (UITextView)->()
-typealias UIImageCss        = (UIImage)->()
-typealias UIImageViewCss    = (UIImageView)->()
+public typealias Css               = (NSObject)->()
+public typealias UIViewCss         = (UIView)->()
+public typealias UILabelCss        = (UILabel)->()
+public typealias UIButtonCss       = (UIButton)->()
+public typealias UITextFieldCss    = (UITextField)->()
+public typealias UITextViewCss     = (UITextView)->()
+public typealias UIImageCss        = (UIImage)->()
+public typealias UIImageViewCss    = (UIImageView)->()
 
 
 // MARK: backgroundColor titleColor BackgroundImage
-func +=<T:UIView>(lhsCube: T, rhsCube:UIColor){
+public func +=<T:UIView>(lhsCube: T, rhsCube:UIColor){
     lhsCube.setCss(rhsCube.bgCss)
 }
 
 extension UIColor{
-    var bgCss:UIViewCss{
+    public var bgCss:UIViewCss{
         get{
             return { v in
                 v.backgroundColor = self
@@ -33,7 +33,7 @@ extension UIColor{
         }
     }
     
-    var textColorCss:Css{
+    public var textColorCss:Css{
         get{
             return {
                 if $0 is UILabel{
@@ -53,7 +53,7 @@ extension UIColor{
         }
         
     }
-    var titleHColorCss:UIButtonCss{
+    public var titleHColorCss:UIButtonCss{
         get{
             return {
                 $0.setTitleColor(self, for: .highlighted)
@@ -62,7 +62,7 @@ extension UIColor{
         
     }
     
-//    var bgImgCss:UIButtonCss{
+//    public var bgImgCss:UIButtonCss{
 //        get{
 //            return {
 //                $0.setBackgroundImage(self.translateIntoImage(), for: .normal)
@@ -70,7 +70,7 @@ extension UIColor{
 //        }
 //        
 //    }
-//    var bgImgHCss:UIButtonCss{
+//    public var bgImgHCss:UIButtonCss{
 //        get{
 //            return {
 //                $0.setBackgroundImage(self.translateIntoImage(), for: .highlighted)
@@ -83,12 +83,12 @@ extension UIColor{
 
 
 // MARK: text placeholder 
-func +=<T:NSObject>(lhsCube: T, rhsCube:String){
+public func +=<T:NSObject>(lhsCube: T, rhsCube:String){
     lhsCube.setCss(rhsCube.css)
 }
 
 extension String{
-    var css:Css{
+    public var css:Css{
         get{
             return{
                 if let a = $0 as? UILabel{
@@ -110,7 +110,7 @@ extension String{
             }
         }
     }
-    var placeholderCss:UITextFieldCss{
+    public var placeholderCss:UITextFieldCss{
         return{
             $0.placeholder = self
         }

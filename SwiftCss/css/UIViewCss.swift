@@ -10,31 +10,31 @@ import Foundation
 import UIKit
 
 
-func edgeAnitia(_ value:Bool) -> UIViewCss {
+public func edgeAnitia(_ value:Bool) -> UIViewCss {
     return {
         $0.layer.allowsEdgeAntialiasing = value
     }
 }
-func clipsToBounds(_ value:Bool) -> UIViewCss {
+public func clipsToBounds(_ value:Bool) -> UIViewCss {
     return {
         $0.clipsToBounds = value
     }
 }
 
 
-func +=(lhsCube: UIView, rhsCube:CGRect){
+public func +=(lhsCube: UIView, rhsCube:CGRect){
     lhsCube.frame = rhsCube
 }
 
 
 
 extension Int{
-    var borderCss:UIViewCss{
+    public var borderCss:UIViewCss{
         get{
             return CGFloat(self).borderCss
         }
     }
-    var cornerRadiusCss:UIViewCss{
+    public var cornerRadiusCss:UIViewCss{
         get{
             return CGFloat(self).cornerRadiusCss
         }
@@ -42,12 +42,12 @@ extension Int{
 
 }
 extension Double{
-    var borderCss:UIViewCss{
+    public var borderCss:UIViewCss{
         get{
             return CGFloat(self).borderCss
         }
     }
-    var cornerRadiusCss:UIViewCss{
+    public var cornerRadiusCss:UIViewCss{
         get{
             return CGFloat(self).cornerRadiusCss
         }
@@ -55,14 +55,14 @@ extension Double{
 }
 
 extension CGFloat{
-    var borderCss:UIViewCss{
+    public var borderCss:UIViewCss{
         get{
             return {
                 $0.layer.borderWidth = self
             }
         }
     }
-    var cornerRadiusCss:UIViewCss{
+    public var cornerRadiusCss:UIViewCss{
         get{
             return {
                 $0.layer.cornerRadius = self
@@ -74,7 +74,7 @@ extension CGFloat{
 }
 
 extension UIColor{
-    var borderCss:UIViewCss{
+    public var borderCss:UIViewCss{
         get{
             return {
                 $0.layer.borderColor = self.cgColor
@@ -84,7 +84,7 @@ extension UIColor{
 }
 
 extension CGRect{
-    var css:UIViewCss{
+    public var css:UIViewCss{
         get{
             return {
                 $0.frame = self
@@ -94,7 +94,7 @@ extension CGRect{
 }
 
 extension CGPoint{
-    var centerCss:UIViewCss{
+    public var centerCss:UIViewCss{
         get{
             return {
                 $0.center = self
@@ -103,7 +103,7 @@ extension CGPoint{
     }
 }
 extension CGSize{
-    var sizeCss:UIViewCss{
+    public var sizeCss:UIViewCss{
         get{
             return {
                 $0.frame.size = self

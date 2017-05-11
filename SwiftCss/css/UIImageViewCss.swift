@@ -9,18 +9,18 @@
 import Foundation
 import UIKit
 
-func +=(lhsCube: UIImageView, rhsCube:UIImage?){
+public func +=(lhsCube: UIImageView, rhsCube:UIImage?){
     lhsCube.image = rhsCube
 }
 
 extension UIImage{
-    var css:UIImageViewCss{
+    public var css:UIImageViewCss{
         return{
             $0.image = self
         }
     }
     
-    var hCss:UIImageViewCss{
+    public var hCss:UIImageViewCss{
         return{
             $0.highlightedImage = self
         }
