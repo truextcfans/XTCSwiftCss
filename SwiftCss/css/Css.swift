@@ -9,17 +9,11 @@
 import Foundation
 import UIKit
 
-public typealias Css               = (NSObject)->()
-public typealias UIViewCss         = (UIView)->()
-public typealias UILabelCss        = (UILabel)->()
-public typealias UIButtonCss       = (UIButton)->()
-public typealias UITextFieldCss    = (UITextField)->()
-public typealias UITextViewCss     = (UITextView)->()
-public typealias UIImageCss        = (UIImage)->()
-public typealias UIImageViewCss    = (UIImageView)->()
+
 
 
 // MARK: backgroundColor titleColor BackgroundImage
+
 public func +=<T:UIView>(lhsCube: T, rhsCube:UIColor){
     lhsCube.setCss(rhsCube.bgCss)
 }
@@ -51,7 +45,6 @@ extension UIColor{
 
             }
         }
-        
     }
     public var titleHColorCss:UIButtonCss{
         get{
@@ -59,7 +52,6 @@ extension UIColor{
                 $0.setTitleColor(self, for: .highlighted)
             }
         }
-        
     }
     
 //    public var bgImgCss:UIButtonCss{
@@ -81,8 +73,8 @@ extension UIColor{
 }
 
 
+// MARK: text & placeholder
 
-// MARK: text placeholder 
 public func +=<T:NSObject>(lhsCube: T, rhsCube:String){
     lhsCube.setCss(rhsCube.css)
 }

@@ -12,6 +12,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let b = UIButton()
+        view += b
+        let bt = UIButton()
+        let lb = UILabel()
+        let tf = UILabel()
+        view += bt + lb + (tf + "a".css)
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 

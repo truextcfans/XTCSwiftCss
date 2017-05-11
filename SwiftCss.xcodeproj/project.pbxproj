@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5DB81D0C1EC44212004301B8 /* CssTypealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB81D0B1EC44212004301B8 /* CssTypealias.swift */; };
 		5DC9745A1EC1721500E3414D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC974591EC1721500E3414D /* AppDelegate.swift */; };
 		5DC9745C1EC1721500E3414D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9745B1EC1721500E3414D /* ViewController.swift */; };
 		5DC9745F1EC1721500E3414D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DC9745D1EC1721500E3414D /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5DB81D0B1EC44212004301B8 /* CssTypealias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CssTypealias.swift; sourceTree = "<group>"; };
 		5DC974561EC1721500E3414D /* SwiftCss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DC974591EC1721500E3414D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DC9745B1EC1721500E3414D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				5DC9746C1EC18CCF00E3414D /* AnyObjectCss.swift */,
+				5DB81D0B1EC44212004301B8 /* CssTypealias.swift */,
 				5DC9746D1EC18CCF00E3414D /* Css.swift */,
 				5DC9746E1EC18CCF00E3414D /* CssOperator.swift */,
 				5DC9746F1EC18CCF00E3414D /* OtherOperator.swift */,
@@ -174,6 +177,7 @@
 			files = (
 				5DC9747D1EC18CCF00E3414D /* UILabelCss.swift in Sources */,
 				5DC9745C1EC1721500E3414D /* ViewController.swift in Sources */,
+				5DB81D0C1EC44212004301B8 /* CssTypealias.swift in Sources */,
 				5DC9747B1EC18CCF00E3414D /* UIControl.swift in Sources */,
 				5DC974771EC18CCF00E3414D /* Css.swift in Sources */,
 				5DC974761EC18CCF00E3414D /* AnyObjectCss.swift in Sources */,

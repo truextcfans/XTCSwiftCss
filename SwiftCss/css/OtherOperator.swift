@@ -10,21 +10,33 @@ import Foundation
 import UIKit
 
 
-public func +=<T:UIView,W:UIView>( lhsCube: T, rhsCube: W){
+public func +=(lhsCube: UIView, rhsCube: UIView){
     lhsCube.addSubview(rhsCube)
 }
 
-public func +=<T:UIView>( lhsCube: T, rhsCube: [UIView]){
+public func +=(lhsCube: UIView, rhsCube: [UIView]){
     rhsCube.forEach{
         lhsCube.addSubview($0)
     }
 }
 
-public func +<T:UIView,W:UIView>( lhsCube: T, rhsCube: W)->[UIView]{
+public func +<T>( lhsCube: T, rhsCube: T)->[T]{
     return [lhsCube,rhsCube]
 }
 
-public func +=<T:CALayer,W:CALayer>( lhsCube: T, rhsCube: W){
+public func +<T>( lhsCube: [T], rhsCube: T)->[T]{
+    var fin = lhsCube
+    fin.append(rhsCube)
+    return fin
+}
+
+public func +<T>( lhsCube: T, rhsCube: [T])->[T]{
+    var fin = rhsCube
+    fin.insert(lhsCube, at: 0)
+    return fin
+}
+
+public func +=( lhsCube: CALayer, rhsCube: CALayer){
     lhsCube.addSublayer(rhsCube)
 }
 
