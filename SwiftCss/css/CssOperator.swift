@@ -11,25 +11,31 @@ import UIKit
 
 //css 相关运算符重载
 
-
-
-public func +<T:NSObject>(lhsCube: @escaping ((T)->()), rhsCube: @escaping ((T)->())) -> (T)->(){
+func +<T:NSObject>(lhsCube: @escaping ((T)->()), rhsCube: @escaping ((T)->())) -> (T)->(){
     return {
         lhsCube($0)
         rhsCube($0)
     }
 }
 
-public func +=<T:NSObject>(lhsCube: T, rhsCube: @escaping ((T)->())){
+func +=<T:NSObject>( lhsCube: T, rhsCube: @escaping ((T)->())){
     lhsCube.setCss(rhsCube)
 }
 
-public func +<T:NSObject>(lhsCube: T, rhsCube: @escaping ((T)->())) -> T{
+func +=<T:NSObject>( lhsCube: T, rhsCube:[((T)->())]){
+    rhsCube.forEach {
+        lhsCube.setCss($0)
+    }
+}
+
+
+
+func +<T:NSObject>(lhsCube: T, rhsCube: @escaping ((T)->())) -> T{
     lhsCube.setCss(rhsCube)
     return  lhsCube
 }
 
-public func +<T:NSObject>(lhsCube: @escaping ((T)->()),rhsCube: T ) -> T{
+func +<T:NSObject>(lhsCube: @escaping ((T)->()),rhsCube: T ) -> T{
     rhsCube.setCss(lhsCube)
     return  rhsCube
 }

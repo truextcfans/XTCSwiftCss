@@ -12,13 +12,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let b = UIButton()
+        var b = UIButton()
+
+        b += ["12312".css ,UIColor.red.bgCss]
         view += b
-        let bt = UIButton()
-        let lb = UILabel()
-        let tf = UILabel()
-        view += bt + lb + (tf + "a".css)
-        
+        b.frame = CGRect.init(x: 0, y: 50, width: 100, height: 44)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
